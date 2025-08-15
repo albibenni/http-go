@@ -12,6 +12,9 @@ func main() {
 	if err != nil {
 		log.Fatal("error", err)
 	}
+
+	defer file.Close()
+
 	str := ""
 	for {
 		data := make([]byte, 8)
